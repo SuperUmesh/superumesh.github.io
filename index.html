@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,63 +11,108 @@
     <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
     <style>
         table, th, td {
-            border-bottom:2px solid black;
+            border-bottom: 2px solid black;
             border-spacing: 0px;
             border-collapse: collapse;
-            width:auto;
             border-top: 2px solid black;
         }
+
         td {
             color: white;
-            padding:20px;
+            padding: 20px;
             font-size: 24px;
             font-family: 'Kulim Park', sans-serif;
         }
+
         th {
-            color:white;
-            padding:20px;
+            color: white;
+            padding: 20px;
             font-size: 24px;
             font-family: 'Kulim Park', sans-serif;
             font-weight: 300;
         }
+
         td a:hover {
             background-color: #ffffff;
             color: #000000;
             box-shadow: inset 0px 0px 0px 2px rgb(0, 0, 0);
         }
+
         td a {
             background-color: #000000;
-            font-size: 17px;
+            font-size: 19px;
             font-family: 'Kulim Park', sans-serif;
             padding: 12px 40px;
-            margin:15px;
-            font-size: 19px;
-            color:rgb(255, 255, 255);
+            margin: 15px;
+            color: rgb(255, 255, 255);
             box-shadow: inset 0px 0px 0px 1px #fff;
-            text-decoration:none;
+            text-decoration: none;
             transition: background 0.8s ease;
         }
+
         div img {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
+
         .previewimg {
-            border:1px solid white;
-            width: 1024px;
-            height: 277px;
-            object-fit: cover;
+            border: 1px solid white;
         }
-        body{
-            background: #03001e;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #440131, #a91a21, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+
+        body {
+            background: #03001e;
+            background: -webkit-linear-gradient(to left, #440131, #a91a21, #7303c0, #03001e);
             background: linear-gradient(to left, #440131, #a91a21, #7303c0, #03001e);
+        }
+
+        .search-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            max-width: 800px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #440131;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .search-container input[type="text"]:focus {
+            border-color: #a91a21;
+            box-shadow: 0 0 10px #a91a21;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #440131;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .search-container button:hover {
+            background-color: #a91a21;
         }
     </style>
 </head>
 <body>
     <div>
         <a href="https://www.superpsx.com/" target="_blank"><img src="https://i.imgur.com/BiicumW.png"></a>
+    </div>
+    <div class="search-container">
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for themes...">
     </div>
     <div class="tbl-header"></div>
     <table>
@@ -6290,7 +6334,29 @@
             <td><a href="https://www.filecrypt.cc/Container/ED267D15D3.html" target="_blank">BuzzH</a></td>
             <td><a href="https://filecrypt.cc/Container/6896789D38.html" target="_blank">OneFile</a></td>
         </tr>
-        
+        <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table tbody");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                tr[i].style.display = "none";  // Hide the row initially
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";  // Show the row if match is found
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
         </tbody>
     </table>
 </body>
