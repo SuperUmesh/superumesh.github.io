@@ -1,29 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperPSX PS4 Theme Collection</title>
     <meta name="description" content="All PS4 Premium Themes">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="https://www.superpsx.com/wp-content/uploads/2022/10/SuperPSX-Favicon-2.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
     <style>
-       body{background:#03001e;background:-webkit-linear-gradient(270deg,#440131,#a91a21,#7303c0,#03001e);background:linear-gradient(270deg,#440131,#a91a21,#7303c0,#03001e);font-family:Kulim Park,sans-serif;margin:0;padding:0;color:#fff}.search-container{width:100%;padding:10px;box-sizing:border-box;display:flex;justify-content:center;align-items:center}.search-container input[type=text]{width:100%;max-width:800px;padding:10px;font-size:18px;border:2px solid #440131;border-radius:5px 0 0 5px;outline:none;transition:all .3s ease-in-out;box-sizing:border-box}.search-container input[type=text]:focus{border-color:#a91a21;box-shadow:0 0 10px #a91a21}.search-container button{padding:10px 20px;font-size:18px;background-color:#440131;color:#fff;border:none;border-radius:0 5px 5px 0;cursor:pointer;transition:background-color .3s ease-in-out}.search-container button:hover{background-color:#a91a21}table{width:100%;border-collapse:collapse;margin-bottom:20px;box-sizing:border-box}table,td,th{border:2px solid #000;border-spacing:0}td,th{padding:10px;font-size:18px;text-align:left;box-sizing:border-box}td a{background-color:#000;font-size:16px;padding:8px 20px;color:#fff;box-shadow:inset 0 0 0 1px #fff;text-decoration:none;transition:background .8s ease;display:inline-block;margin-top:5px}td a:hover{background-color:#fff;color:#000;box-shadow:inset 0 0 0 2px #000}.previewimg{width:100%;max-width:1024px;height:auto;object-fit:cover;display:block;margin:0 auto;border:1px solid #fff}@media (max-width:768px){.search-container input[type=text],td,th{font-size:16px;padding:8px}.search-container button{font-size:16px;padding:8px 16px}td a{font-size:14px;padding:6px 16px}}@media (max-width:480px){td,th{text-align:center}td,th,tr{display:block;width:100%}tr{margin-bottom:10px}.search-container input[type=text]{font-size:14px;padding:6px}.search-container button{font-size:14px;padding:6px 12px}td a{font-size:12px;padding:5px 12px}}
+        body {
+            background: #03001e;
+            background: -webkit-linear-gradient(to left, #440131, #a91a21, #7303c0, #03001e);
+            background: linear-gradient(to left, #440131, #a91a21, #7303c0, #03001e);
+            font-family: 'Kulim Park', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .search-container {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            max-width: 800px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #440131;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .search-container input[type="text"]:focus {
+            border-color: #a91a21;
+            box-shadow: 0 0 10px #a91a21;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #440131;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .search-container button:hover {
+            background-color: #a91a21;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            border-spacing: 0px;
+        }
+
+        th, td {
+            padding: 10px;
+            font-size: 18px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        td a {
+            background-color: #000000;
+            font-size: 16px;
+            padding: 8px 20px;
+            color: #ffffff;
+            box-shadow: inset 0px 0px 0px 1px #fff;
+            text-decoration: none;
+            transition: background 0.8s ease;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        td a:hover {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: inset 0px 0px 0px 2px rgb(0, 0, 0);
+        }
+
+        .previewimg {
+            width: 100%;
+            max-width: 1024px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid white;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .search-container input[type="text"] {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .search-container button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            td a {
+                font-size: 14px;
+                padding: 6px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            th, td {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+
+            tr {
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+            }
+
+            .search-container input[type="text"] {
+                font-size: 14px;
+                padding: 6px;
+            }
+
+            .search-container button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            td a {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <div>
-        <a href="https://www.superpsx.com/" target="_blank"><img src="https://i.imgur.com/BiicumW.png"></a>
+        <a href="https://www.superpsx.com/" target="_blank">
+            <img src="https://i.imgur.com/BiicumW.png" alt="SuperPSX" class="previewimg">
+        </a>
     </div>
     <div class="search-container">
         <!-- Search Bar -->
         <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for themes...">
     </div>
-    <div class="tbl-header"></div>
     <table>
         <thead>
+            <tr>
+                <th>Theme Name</th>
+                <th>Preview</th>
+                <th>BuzzH Link</th>
+                <th>OneFile Link</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <th>Theme Name</th>
                 <th>Preview</th>
