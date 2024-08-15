@@ -67,14 +67,15 @@
         }
 
         table, th, td {
-            border: 2px solid black;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
             border-spacing: 0px;
         }
 
         th, td {
             padding: 10px;
             font-size: 18px;
-            text-align: left;
+            text-align: center;
             box-sizing: border-box;
         }
 
@@ -105,63 +106,104 @@
             margin: 0 auto;
             border: 1px solid white;
         }
-
-        @media (max-width: 768px) {
-            th, td {
-                font-size: 16px;
-                padding: 8px;
-            }
-
-            .search-container input[type="text"] {
-                font-size: 16px;
-                padding: 8px;
-            }
-
-            .search-container button {
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-
-            td a {
-                font-size: 14px;
-                padding: 6px 16px;
-            }
+        
+        .previewimg2 {
+            width: 100%;
+            max-width: 1024px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
         }
+        
+        @media (min-width: 1024px) {
+    th:nth-child(1), td:nth-child(1) {
+        width: 15%; /* Apply specific width for larger screens */
+    }
 
-        @media (max-width: 480px) {
-            th, td {
-                display: block;
-                text-align: center;
-                width: 100%;
-            }
+    th:nth-child(2), td:nth-child(2) {
+        width: 50%; /* Apply specific width for larger screens */
+    }
 
-            tr {
-                margin-bottom: 10px;
-                display: block;
-                width: 100%;
-            }
+    th:nth-child(3), td:nth-child(2) {
+        width: 5%; /* Apply specific width for larger screens */
+    }
 
-            .search-container input[type="text"] {
-                font-size: 14px;
-                padding: 6px;
-            }
+    th:nth-child(4), td:nth-child(2) {
+        width: 5%; /* Apply specific width for larger screens */
+    }
+}
 
-            .search-container button {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 16px;
+        padding: 8px;
+    }
 
-            td a {
-                font-size: 12px;
-                padding: 5px 12px;
-            }
+    .search-container input[type="text"] {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .search-container button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    td a {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    /* Remove specific column widths for mobile screens */
+    th, td {
+        width: auto; /* Default to auto width for mobile */
+    }
+
+    .previewimg, .previewimage2 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .search-container input[type="text"] {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .search-container button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    td a {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .previewimg, .previewimage2 {
+        max-width: 100%;
+    }
         }
     </style>
 </head>
 <body>
     <div>
         <a href="https://www.superpsx.com/" target="_blank">
-            <img src="https://i.imgur.com/BiicumW.png" alt="SuperPSX" class="previewimg">
+            <img src="https://i.imgur.com/BiicumW.png" alt="SuperPSX" class="previewimg2">
         </a>
     </div>
     <div class="search-container">
